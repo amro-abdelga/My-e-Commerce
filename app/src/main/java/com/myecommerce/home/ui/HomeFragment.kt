@@ -38,7 +38,8 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = adapter
 
         searchIcon.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+            val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
+            findNavController().navigate(action)
         }
 
         adapter.submitList(
