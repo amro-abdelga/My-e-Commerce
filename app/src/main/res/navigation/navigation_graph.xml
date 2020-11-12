@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/fragment_home"
+        android:name="com.myecommerce.home.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        tools:layout="@layout/fragment_search"
+        android:name="com.myecommerce.search.ui.SearchFragment"
+        android:label="SearchDialogFragment" >
+        <action
+            android:id="@+id/action_searchDialogFragment_to_pdpFragment"
+            app:destination="@id/pdpFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/pdpFragment"
+        tools:layout="@layout/fragment_pdp"
+        android:name="com.myecommerce.pdp.ui.PdpFragment"
+        android:label="PdpFragment" >
+        <argument
+            android:name="articleId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>
