@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.myecommerce.R
 import com.myecommerce.databinding.FragmentSearchBinding
 import com.myecommerce.search.ui.adapter.SearchAdapter
 import com.myecommerce.search.ui.model.SearchCommand
@@ -52,11 +53,13 @@ class SearchFragment : Fragment() {
         when (command) {
             is SearchCommand.OpenPdp -> openPdp(command.articleId)
             else -> {
+
             }
         }
     }
 
     private fun openPdp(articleId: String) {
+        findNavController().navigate(R.id.action_searchDialogFragment_to_pdpFragment)
     }
 
     private fun onArticlesReceived(list: List<UISearchResultModel>?) {

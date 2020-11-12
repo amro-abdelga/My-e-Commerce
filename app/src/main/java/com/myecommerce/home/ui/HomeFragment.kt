@@ -37,6 +37,10 @@ class HomeFragment : Fragment() {
         PagerSnapHelper().attachToRecyclerView(recyclerView)
         recyclerView.adapter = adapter
 
+        searchIcon.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+        }
+
         adapter.submitList(
             viewModel.getElement(
                 topBar.getTabAt(topBar.selectedTabPosition)?.text?.toString() ?: ""
