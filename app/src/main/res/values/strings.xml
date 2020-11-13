@@ -10,4 +10,7 @@
     <string name="user">My account</string>
     <string name="cart">Shopping bag</string>
     <string name="search_disable">Disabled</string>
+    <string name="defaultChannel">My E commerce default channel</string>
+    <string name="notificationDescription">Review your fav article</string>
+    <string name="deepLinkNotificationTitle">Review your fav article:</string>
 </resources>
