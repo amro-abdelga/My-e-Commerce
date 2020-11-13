@@ -9,4 +9,5 @@
     <string name="menu">MENU</string>
     <string name="user">My account</string>
     <string name="cart">Shopping bag</string>
+    <string name="search_disable">Disabled</string>
 </resources>

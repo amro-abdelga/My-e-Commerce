@@ -5,7 +5,6 @@
     android:id="@+id/navigation_graph"
     app:startDestination="@id/homeFragment">
 
-
     <fragment
         android:id="@+id/homeFragment"
         tools:layout="@layout/fragment_home"
@@ -18,20 +17,25 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        tools:layout="@layout/fragment_search"
         android:name="com.myecommerce.search.ui.SearchFragment"
-        android:label="SearchDialogFragment" >
+        android:label="SearchDialogFragment"
+        tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchDialogFragment_to_pdpFragment"
             app:destination="@id/pdpFragment" />
+        <deepLink
+            android:id="@+id/searchDeepLink"
+            app:uri="https://myecommerce.com/search" />
     </fragment>
-
 
     <fragment
         android:id="@+id/pdpFragment"
         tools:layout="@layout/fragment_pdp"
         android:name="com.myecommerce.pdp.ui.PdpFragment"
         android:label="PdpFragment" >
+        <deepLink
+            android:id="@+id/searchDeepLink"
+            app:uri="https://myecommerce.com/pdp/{articleId}" />
         <argument
             android:name="articleId"
             app:argType="string"

@@ -12,11 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyeCommerce">
         <activity android:name="com.myecommerce.MainActivity">
+            <nav-graph android:value="@navigation/navigation_graph" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
         </activity>
     </application>
 
