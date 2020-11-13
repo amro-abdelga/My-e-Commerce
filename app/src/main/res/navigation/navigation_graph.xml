@@ -34,7 +34,7 @@
         android:name="com.myecommerce.pdp.ui.PdpFragment"
         android:label="PdpFragment" >
         <deepLink
-            android:id="@+id/searchDeepLink"
+            android:id="@+id/pdpFragmentDeepLink"
             app:uri="https://myecommerce.com/pdp/{articleId}" />
         <argument
             android:name="articleId"
